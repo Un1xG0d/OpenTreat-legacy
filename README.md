@@ -96,7 +96,9 @@ If everything was successful you should see a web browser window pop up with the
 ## Resources
 ### Links
 [Thingiverse: original fish feeder model](https://www.thingiverse.com/thing:301532)
+
 [SimpleWebRTC GitHub](https://github.com/simplewebrtc/SimpleWebRTC)
+
 [SimpleWebRTC SignalMaster GitHub](https://github.com/simplewebrtc/signalmaster)
 
 ### Recommended print settings
@@ -105,7 +107,8 @@ If everything was successful you should see a web browser window pop up with the
 > Speed: Standard  
 
 ### RPi GPIO Diagram
-![](README/RPi-GPIO-pinout.png)
 > Red wire - Pin 1 - 3v3 power  
 > Black wire - Pin 6 - ground  
-> Orange wire - Pin 11 - GPIO 17  
+> Orange wire - Pin 11 - GPIO 17 
+
+![](README/RPi-GPIO-pinout.png)
