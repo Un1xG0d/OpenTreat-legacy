@@ -1,0 +1,19 @@
+{
+  "name": "OpenTreat",
+  "version": "1.0.0",
+  "description": "Video chat with your pet and remotely dispense treats with the push of a button.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "OpenTreat"
+  ],
+  "author": "Alan Raff",
+  "dependencies": {
+    "express": "^4.16.1",
+    "handlebars": "^4.0.11",
+    "jquery": "^3.3.1",
+    "semantic-ui-css": "^2.3.1",
+    "simplewebrtc": "^3.0.1"
+  }
+}
