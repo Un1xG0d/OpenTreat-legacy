@@ -102,7 +102,7 @@ If everything was successful you should see a web browser window pop up with the
 [SimpleWebRTC SignalMaster GitHub](https://github.com/simplewebrtc/signalmaster)
 
 ### Recommended print settings
-> Scale: 150%
+> Scale: 150%  
 > Infill: 10%  
 > Layer Height: 0.3  
 > Speed: Standard  
