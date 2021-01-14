@@ -116,3 +116,5 @@ If everything was successful you should see a web browser window pop up with the
 
 ### Screenshots & proof-of-concept demo
 ![](README/Mockup-1.png)
+
+![](README/Dispenser-1.gif)
