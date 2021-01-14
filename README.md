@@ -62,6 +62,9 @@ You can test a successful SignalMaster setup by opening your Heroku URL in a web
 > If you see output similar to `{“code”:0,”message”:”Transport unknown”}`, your signaling server has been successfully deployed.  
 
 ### Deploying the video chat app on Heroku
+
+Before you deploy the video chat app to Heroku's cloud, make sure you find and replace all instances of `https://opentreat-signalserver.herokuapp.com/` in the codebase with the URL to the signaling server you just set up.
+
 ```
 cd js/
 heroku create opentreat-videochat
