@@ -6,7 +6,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(servo_pin, GPIO.OUT)
 
 p = GPIO.PWM(servo_pin, 50) # GPIO 17 for PWM with 50Hz
-p.start(0) # Initialization
+p.start(0)
 
 try:
     p.ChangeDutyCycle(5)
