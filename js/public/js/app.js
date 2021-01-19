@@ -150,4 +150,9 @@ window.addEventListener('load', () => {
     }
     return false;
   });
+
+  //Drop Treat
+  $('#treat-btn').on('click', () => {
+    window.open("http://10.0.0.147/spin.php");
+  });
 });
