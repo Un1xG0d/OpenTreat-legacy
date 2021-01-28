@@ -77,7 +77,14 @@ git push heroku master
 If everything was successful you should see a web browser window pop up with the video chat application.
 
 ## Usage
-### Creating a room on the Raspberry Pi
+### Automatic run on boot
+Create a cronjob with `crontab -e` to run the Python script on boot that automatically creates a room on the OpenTreat app in Heroku's cloud.
+
+```
+@reboot python3 /home/pi/OpenTreat/src/python/create-room.py
+```
+
+### Manually Creating a room on the Raspberry Pi
 1. Open a web browser and navigate to your Heroku app’s URL
 2. Allow your browser to access your webcam
 3. Enter your name and the new room ID in the text fields
@@ -118,6 +125,10 @@ If everything was successful you should see a web browser window pop up with the
 ![](README/RPi-GPIO-pinout.png)
 
 ### Screenshots & proof-of-concept demo
+[Video Demo](https://youtu.be/6tzPRBlFip4)
+
 ![](README/Mockup-1.png)
 
 ![](README/Dispenser-1.gif)
+
+![](README/Electronics-in-case.jpg)
