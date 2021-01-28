@@ -105,6 +105,8 @@ Create a cronjob with `crontab -e` to run the Python script on boot that automat
 
 ## Resources
 ### Links
+[Video demo of OpenTreat](https://youtu.be/6tzPRBlFip4)
+
 [Thingiverse: original fish feeder model](https://www.thingiverse.com/thing:301532)
 
 [SimpleWebRTC GitHub](https://github.com/simplewebrtc/SimpleWebRTC)
@@ -112,7 +114,7 @@ Create a cronjob with `crontab -e` to run the Python script on boot that automat
 [SimpleWebRTC SignalMaster GitHub](https://github.com/simplewebrtc/signalmaster)
 
 ### Recommended print settings
-> Scale: 150%  
+> Scale: 100%  
 > Infill: 10%  
 > Layer Height: 0.3  
 > Speed: Standard  
@@ -125,10 +127,8 @@ Create a cronjob with `crontab -e` to run the Python script on boot that automat
 ![](README/RPi-GPIO-pinout.png)
 
 ### Screenshots & proof-of-concept demo
-[LINK TO VIDEO DEMO ON YOUTUBE](https://youtu.be/6tzPRBlFip4)
-
 ![](README/Mockup-1.png)
 
-![](README/Dispenser-1.gif)
-
 ![](README/Electronics-in-case.jpg)
+
+![](README/Dispenser-1.gif)
