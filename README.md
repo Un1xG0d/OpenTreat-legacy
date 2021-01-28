@@ -105,7 +105,7 @@ Create a cronjob with `crontab -e` to run the Python script on boot that automat
 
 ## Resources
 ### Links
-[Video demo of OpenTreat](https://youtu.be/6tzPRBlFip4)
+:movie_camera: [Video demo of OpenTreat](https://youtu.be/6tzPRBlFip4) :movie_camera:
 
 [Thingiverse: original fish feeder model](https://www.thingiverse.com/thing:301532)
 
