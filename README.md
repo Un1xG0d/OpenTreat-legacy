@@ -84,7 +84,7 @@ Create a cronjob with `crontab -e` to run the Python script on boot that automat
 @reboot python3 /home/pi/OpenTreat/src/python/create-room.py
 ```
 
-### Manually Creating a room on the Raspberry Pi
+### Manually creating a room on the Raspberry Pi
 1. Open a web browser and navigate to your Heroku app’s URL
 2. Allow your browser to access your webcam
 3. Enter your name and the new room ID in the text fields
@@ -125,7 +125,7 @@ Create a cronjob with `crontab -e` to run the Python script on boot that automat
 ![](README/RPi-GPIO-pinout.png)
 
 ### Screenshots & proof-of-concept demo
-[Video Demo](https://youtu.be/6tzPRBlFip4)
+[LINK TO VIDEO DEMO ON YOUTUBE](https://youtu.be/6tzPRBlFip4)
 
 ![](README/Mockup-1.png)
 
