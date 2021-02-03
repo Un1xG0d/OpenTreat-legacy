@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-import time
 
 opt = Options()
 opt.add_argument('--headless')
@@ -18,12 +17,4 @@ opt.add_experimental_option("prefs", { \
 
 driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver', options=opt)
 
-driver.get('https://opentreat.herokuapp.com')
-username = driver.find_element_by_id("username")
-username.send_keys('RPi-server')
-roomname = driver.find_element_by_id("roomName")
-roomname.send_keys('miles')
-createbtn = driver.find_element_by_id('create-btn')
-createbtn.click()
-
-print("OpenTreat browser session started!")
+driver.get('https://opentreat-eric.herokuapp.com/broadcast.html')
