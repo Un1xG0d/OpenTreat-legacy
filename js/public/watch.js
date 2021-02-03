@@ -16,7 +16,7 @@ const socket = io.connect(window.location.origin);
 const video = document.querySelector("video");
 const enableAudioButton = document.querySelector("#enable-audio");
 
-enableAudioButton.addEventListener("click", enableAudio)
+enableAudioButton.addEventListener("click", dropTreat)
 
 socket.on("offer", (id, description) => {
   peerConnection = new RTCPeerConnection(config);
@@ -60,4 +60,8 @@ window.onunload = window.onbeforeunload = () => {
 function enableAudio() {
   console.log("Enabling audio")
   video.muted = false;
+}
+
+function dropTreat() {
+  window.open("http://73.61.201.110/spin.php");
 }
