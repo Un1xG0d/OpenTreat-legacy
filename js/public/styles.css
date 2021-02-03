@@ -1,14 +1,4 @@
-@media only screen and (max-width: 376px) {
-  /* For mobile devices: */
-  html {
-    overflow: hidden;
-    height: 100%;
-  }
-  video {width: 100%;}
-  #dropTreat {width: 90%;}
-}
-
-@media only screen and (min-width: 377px) {
+@media only screen and (min-width: 380px) {
   /* For desktops: */
   html {
     overflow: hidden;
@@ -16,4 +6,18 @@
   }
   video {width: 50%;}
   #dropTreat {width: 50%;}
+}
+
+/* iPhone portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    html {
+      overflow: hidden;
+      height: 100%;
+    }
+    video {width: 100%;}
+    #dropTreat {width: 90%;}
 }
