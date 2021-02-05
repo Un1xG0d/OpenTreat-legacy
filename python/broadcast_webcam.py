@@ -18,3 +18,4 @@ opt.add_experimental_option("prefs", { \
 driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver', options=opt)
 
 driver.get('https://<my-opentreat-project>.herokuapp.com/broadcast.html')
+print("SUCCESS: Broadcasting webcam.")
