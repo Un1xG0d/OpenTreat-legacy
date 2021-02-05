@@ -1,7 +1,7 @@
 # OpenTreat
 OpenTreat allows a user to view and interact with their pets while not at home. Watch a live video stream of your pets from your smartphone or laptop, and remotely dispense treats with the push of a button.
 
-## Treat Dispenser System
+## Treat dispenser system
 ### Overview
 The treat dispenser system is built using a Raspberry Pi and 3D printed parts. When a user presses the button on the webapp, a Python script is executed on the Pi to turn the servo motor for a certain number of seconds. The servo motor turns the 3D printed auger and pushes the treat down the tube where it drops out the end and into the feeding bowl.
 
@@ -44,16 +44,16 @@ sudo bash rpi-www/setup.sh
 
 The servo connected to the RPi should now spin when visiting `<Raspberry Pi IP>/spin.php` in a web browser. To add the ability to drop treats when not connected to the same WiFi network as the OpenTreat dispenser, you must port forward port 80 of the Raspberry Pi on your router's admin page.
 
-## Video Share App
-The video chat app is built with Javascript using NodeJS, Express, WebRTC, and Socket.IO. The webapp is hosted in Heroku and allows a user to login and view the video stream being broadcasted from the Pi's webcam.
+## Video stream app
+The video streaming app is built with Javascript using NodeJS, Express, WebRTC, and Socket.IO. The webapp is hosted in Heroku and allows a user to login and view the video stream being broadcasted from the Pi's webcam.
 
 ### Set your public IP
-Before you deploy the video chat app to Heroku's cloud, make sure you update the `dropTreat()` function in the file `js/public/watch.js` with your Pi's public IP address. You can get your public IP from [IPChicken](https://ipchicken.com/) after setting up port forwarding on your router.
+Before you deploy this webapp to Heroku's cloud, make sure you update the `dropTreat()` function in the file `js/public/watch.js` with your Pi's public IP address. You can get your public IP from [IPChicken](https://ipchicken.com/) after setting up port forwarding on your router.
 
 ### Configure your TURN server
 Create a free account on http://numb.viagenie.ca. Then configure `iceServers` at the top of `js/public/watch.js` with the details of the TURN server you received via email after creating your account.
 
-### Deploy the video chat app
+### Deploy the video streaming app
 ```
 heroku create <my-opentreat-project>
 
@@ -95,15 +95,15 @@ On your smartphone or laptop, browse to `https://<my-opentreat-project>.herokuap
 > Layer Height: 0.3  
 > Speed: Standard  
 
-### RPi GPIO Diagram
+### RPi GPIO diagram
 > Red wire - Pin 1 - 3v3 power  
 > Black wire - Pin 6 - ground  
 > Orange wire - Pin 11 - GPIO 17  
 
 ![](README/RPi-GPIO-pinout.png)
 
-### Screenshots & proof-of-concept demo
-![](README/Mockup-1.png)
+### Screenshots & proof-of-concept
+![](README/Mockup-2.png)
 
 ![](README/Electronics-in-case.jpg)
 
