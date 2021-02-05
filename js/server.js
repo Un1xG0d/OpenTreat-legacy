@@ -1,18 +1,35 @@
-const express = require('express');
-
+const express = require("express");
 const app = express();
+
+let broadcaster;
 const port = process.env.PORT;
 
-// Set public folder as root
-app.use(express.static('public'));
+const http = require("http");
+const server = http.createServer(app);
 
-// Provide access to node_modules folder
-app.use('/scripts', express.static(`${__dirname}/node_modules/`));
+const io = require("socket.io")(server);
+app.use(express.static(__dirname + "/public"));
 
-// Redirect all traffic to index.html
-app.use((req, res) => res.sendFile(`${__dirname}/public/index.html`));
-
-app.listen(port, () => {
-	// eslint-disable-next-line no-console
-	console.info(new Date(), ': Started listening on port', port);
+io.sockets.on("error", e => console.log(e));
+io.sockets.on("connection", socket => {
+  socket.on("broadcaster", () => {
+    broadcaster = socket.id;
+    socket.broadcast.emit("broadcaster");
+  });
+  socket.on("watcher", () => {
+    socket.to(broadcaster).emit("watcher", socket.id);
+  });
+  socket.on("offer", (id, message) => {
+    socket.to(id).emit("offer", socket.id, message);
+  });
+  socket.on("answer", (id, message) => {
+    socket.to(id).emit("answer", socket.id, message);
+  });
+  socket.on("candidate", (id, message) => {
+    socket.to(id).emit("candidate", socket.id, message);
+  });
+  socket.on("disconnect", () => {
+    socket.to(broadcaster).emit("disconnectPeer", socket.id);
+  });
 });
+server.listen(port, () => console.log(`Server is running on port ${port}`));
