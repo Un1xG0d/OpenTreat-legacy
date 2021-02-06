@@ -23,4 +23,4 @@ cat js/public/watch.js |grep $turn_password
 #Replace <view-page-password> with $webapp_pass
 sed -e "s#<view-page-password>#$webapp_pass#g" templates/users.js > js/db/users.js
 echo -e "[info] File generated: js/db/users.js\n[info] Changes:"
-cat /js/db/users.js |grep $webapp_pass
+cat js/db/users.js |grep $webapp_pass
