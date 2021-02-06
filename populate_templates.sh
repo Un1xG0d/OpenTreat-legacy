@@ -7,10 +7,11 @@ read -p "[prompt] TURN server URL: " turn_url
 read -p "[prompt] TURN server username: " turn_username
 read -p "[prompt] TURN server password: " turn_password
 
-#Replace <my-opentreat-project> with $heroku_app in broadcast_webcam.py
-sed -e "s#<my-opentreat-project>#$heroku_app#g" templates/broadcast_webcam.py > python/broadcast_webcam.py
+#Handle replacements in broadcast_webcam.py
+sed -e "s#<my-opentreat-project>#$heroku_app#g" -e "s#<view-page-password>#$webapp_pass#g" templates/broadcast_webcam.py > python/broadcast_webcam.py
 echo -e "[info] File generated: python/broadcast_webcam.py\n[info] Changes:"
 cat python/broadcast_webcam.py |grep $heroku_app
+cat python/broadcast_webcam.py |grep $webapp_pass
 
 #Handle replacements in watch.js
 sed -e "s#<turn-url>#$turn_url#g" -e "s#<turn-username>#$turn_username#g" -e "s#<turn-password>#$turn_password#g" -e "s#<rpi-ip-address>#$pub_ip#g" templates/watch.js > js/public/watch.js
