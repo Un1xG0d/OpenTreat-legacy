@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+import time
 
 opt = Options()
 opt.add_argument('--headless')
@@ -22,3 +23,6 @@ pw = driver.find_element_by_id("password")
 pw.send_keys('<view-page-password>')
 go = driver.find_element_by_id("submit")
 go.click()
+time.sleep(2)
+bcast = driver.find_element_by_id("broadcast")
+bcast.click()
