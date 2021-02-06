@@ -1,5 +1,3 @@
 .DS_Store
 js/node_modules/
-js/db/users.js
-js/public/watch.js
-python/broadcast_webcam.py
+signalserver/node_modules/
