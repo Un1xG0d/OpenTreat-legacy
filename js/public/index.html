@@ -1,12 +1,27 @@
-<form action="/login" method="post">
-	<div>
-	<input type="text" name="username" value="view" hidden readonly/><br/>
-	</div>
-	<div>
-	<label>Password:</label>
-	<input type="password" name="password"/>
-	</div>
-	<div>
-	<input type="submit" value="Submit"/>
-	</div>
-</form>
+<html style="background-color: #575757;">
+	<head>
+		<title>OpenTreat</title>
+		<meta charset="UTF-8" />
+		<link href="/styles.css" rel="stylesheet" />
+	</head>
+	<body>
+		<br><br><br><br><br><br><br><br>
+		<center>
+			<form action="/login" method="post">
+				<div>
+				<input type="text" name="username" value="view" hidden readonly/><br/>
+				</div>
+				<div>
+				<input type="password" id="password" name="password" placeholder="password" />
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<div>
+				<input type="image" src="go.png" alt="Submit" />
+				</div>
+			</form>
+		</center>
+	</body>
+</html>
