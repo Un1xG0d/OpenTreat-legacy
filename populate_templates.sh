@@ -1,6 +1,7 @@
 cd ~/OpenTreat/src/
 
 read -p "[prompt] Heroku app name: " heroku_app
+read -p "[prompt] Create webapp password: " webapp_pass
 read -p "[prompt] Raspberry Pi's public IP address: " pub_ip
 read -p "[prompt] TURN server URL: " turn_url
 read -p "[prompt] TURN server username: " turn_username
@@ -18,3 +19,8 @@ cat js/public/watch.js |grep $pub_ip
 cat js/public/watch.js |grep $turn_url
 cat js/public/watch.js |grep $turn_username
 cat js/public/watch.js |grep $turn_password
+
+#Replace <view-page-password> with $webapp_pass
+sed -e "s#<view-page-password>#$webapp_pass#g" templates/users.js > js/db/users.js
+echo -e "[info] File generated: js/db/users.js\n[info] Changes:"
+cat /js/db/users.js |grep $webapp_pass
