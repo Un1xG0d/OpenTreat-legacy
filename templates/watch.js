@@ -5,9 +5,9 @@ const config = {
       //   "urls": "stun:stun.l.google.com:19302",
       // },
       { 
-        "urls": "turn:numb.viagenie.ca",
-        "username": "zrjvtdop@sharklasers.com",
-        "credential": "OpenTreat2021?"
+        "urls": "turn:<turn-url>",
+        "username": "<turn-username>",
+        "credential": "<turn-password>"
       }
   ]
 };
@@ -63,5 +63,5 @@ function enableAudio() {
 }
 
 function dropTreat() {
-  window.open("http://73.61.201.110/spin.php");
+  window.open("http://<rpi-ip-address>/spin.php");
 }

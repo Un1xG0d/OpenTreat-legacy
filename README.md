@@ -47,16 +47,26 @@ The servo connected to the RPi should now spin when visiting `<Raspberry Pi IP>/
 ## Video stream app
 The video streaming app is built with Javascript using NodeJS, Express, WebRTC, and Socket.IO. The webapp is hosted in Heroku and allows a user to login and view the video stream being broadcasted from the Pi's webcam.
 
-### Set your public IP
-Before you deploy this webapp to Heroku's cloud, make sure you update the `dropTreat()` function in the file `js/public/watch.js` with your Pi's public IP address. You can get your public IP from [IPChicken](https://ipchicken.com/) after setting up port forwarding on your router.
-
-### Configure your TURN server
-Create a free account on http://numb.viagenie.ca. Then configure `iceServers` at the top of `js/public/watch.js` with the details of the TURN server you received via email after creating your account.
-
-### Deploy the video streaming app
+### Create new app on Heroku
 ```
 heroku create <my-opentreat-project>
+```
 
+Keep track of your app name; you will need it when populating the code templates.
+
+### Find your Pi's public IP
+You can get your public IP from [IPChicken](https://ipchicken.com/) after setting up port forwarding on your router.
+
+### Register for free TURN server account
+Create a free account on http://numb.viagenie.ca. You will need the server & login details you receive via email to run `populate_templates.sh`.
+
+### Generate personalized files from code templates
+```
+bash populate_templates.sh
+```
+
+### Deploy the video streaming app to Heroku
+```
 cd js/
 
 git add .
@@ -68,9 +78,7 @@ If everything was successful you can now browse to `https://<my-opentreat-projec
 
 ## Usage
 ### Automatically broadcast Pi's webcam on startup
-Modify the `driver.get()` line of the file `python/broadcast_webcam.py` to use your Heroku app's URL.
-
-Create a cronjob with `crontab -e` to run this Python script on boot to automatically broadcast the Pi's webcam to your webapp hosted on Heroku.
+Create a cronjob with `crontab -e` to run a Python script on boot to automatically broadcast the Pi's webcam to your webapp hosted on Heroku.
 
 ```
 @reboot python3 /home/pi/OpenTreat/src/python/broadcast_webcam.py

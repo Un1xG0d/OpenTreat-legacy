@@ -9,10 +9,10 @@ opt.add_argument('--disable-web-security')
 opt.add_argument("--remote-debugging-port=9222")
 #Pass the argument 1 to allow and 2 to block
 opt.add_experimental_option("prefs", { \
-    "profile.default_content_setting_values.media_stream_mic": 2, 
+    "profile.default_content_setting_values.media_stream_mic": 2,
     "profile.default_content_setting_values.media_stream_camera": 1,
-    "profile.default_content_setting_values.geolocation": 2, 
-    "profile.default_content_setting_values.notifications": 2 
+    "profile.default_content_setting_values.geolocation": 2,
+    "profile.default_content_setting_values.notifications": 2
   })
 
 driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver', options=opt)

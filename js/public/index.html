@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>OpenTreat</title>
-    <meta charset="UTF-8" />
-    <link href="/styles.css" rel="stylesheet" />
-  </head>
-  <body>
-    <center>
-      <video playsinline autoplay muted></video>
-      <br>
-      <br>
-      <img src="dropTreat.png" id="enable-audio" />
-    </center>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/watch.js"></script>
-  </body>
-</html>
+<form action="/login" method="post">
+	<div>
+	<input type="text" name="username" value="view" hidden readonly/><br/>
+	</div>
+	<div>
+	<label>Password:</label>
+	<input type="password" name="password"/>
+	</div>
+	<div>
+	<input type="submit" value="Submit"/>
+	</div>
+</form>
