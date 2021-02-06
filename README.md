@@ -22,12 +22,13 @@ A Python3 script takes advantage of the Raspberry Pi’s GPIO pins to send a sig
 
 #### Clone the repo into a folder called OpenTreat in your Pi's home directory
 ```
-git clone https://github.com/psycoder17/OpenTreat.git ~/OpenTreat
+git clone https://github.com/psycoder17/OpenTreat.git ~/OpenTreat/src
+cd ~/OpenTreat/src/
 ```
 
 #### Install dependencies
 ```
-pip3 install -r ~/OpenTreat/src/python/requirements.txt
+pip3 install -r python/requirements.txt
 ```
 
 #### Manually execute the script to test that the servo/auger spins
