@@ -75,7 +75,7 @@ git commit -m "commit message"
 git push heroku master
 ```
 
-If everything was successful you can now browse to `https://<my-opentreat-project>.herokuapp.com/broadcast.html` on your Raspberry Pi to manually start broadcasting the Pi's webcam to your webapp on Heroku.
+If everything was successful you can now browse to `https://<my-opentreat-project>.herokuapp.com/broadcast` on your Raspberry Pi to manually start broadcasting the Pi's webcam to your webapp on Heroku.
 
 ## Usage
 ### Automatically broadcast Pi's webcam on startup
