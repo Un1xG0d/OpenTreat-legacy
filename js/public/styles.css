@@ -6,6 +6,13 @@
   }
   video {width: 50%;}
   #dropTreat {width: 50%;}
+  input#password {
+      background-color: #575757;
+      border: none;
+      color: white;
+      font-size: 60px;
+      text-align: center;
+    }
 }
 
 /* iPhone portrait */
@@ -24,4 +31,11 @@
     }
     video {width: 90%;}
     #dropTreat {width: 90%;}
+    input#password {
+      background-color: #575757;
+      border: none;
+      color: white;
+      font-size: 60px;
+      text-align: center;
+    }
 }
