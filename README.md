@@ -99,8 +99,8 @@ On your smartphone or laptop, browse to `https://<my-opentreat-project>.herokuap
 
 ### Recommended print settings
 > Scale: 100%  
-> Infill: 10%  
-> Layer Height: 0.3  
+> Infill: 20%  
+> Layer Height: 0.2  
 > Speed: Standard  
 
 ### RPi GPIO diagram
