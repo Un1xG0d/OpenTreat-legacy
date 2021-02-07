@@ -28,7 +28,7 @@ cd ~/OpenTreat/src/
 
 #### Install dependencies
 ```
-pip3 install -r python/requirements.txt
+sudo -H pip3 install -r python/requirements.txt
 ```
 
 #### Manually execute the script to test that the servo/auger spins
