@@ -1,14 +1,14 @@
 const peerConnections = {};
 const config = {
   iceServers: [
-    { 
-      "urls": "stun:stun.l.google.com:19302",
-    },
     // { 
-    //   "urls": "turn:TURN_IP?transport=tcp",
-    //   "username": "TURN_USERNAME",
-    //   "credential": "TURN_CREDENTIALS"
-    // }
+    //   "urls": "stun:stun.l.google.com:19302",
+    // },
+    { 
+      "urls": "turn:numb.viagenie.ca",
+      "username": "zrjvtdop@sharklasers.com",
+      "credential": "OpenTreat2021?"
+    }
   ]
 };
 
