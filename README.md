@@ -17,33 +17,32 @@ The treat dispenser system is built using a Raspberry Pi and 3D printed parts. W
 2. Assemble the parts using super glue
 3. Use the pinout diagram in the Resources section (or find one for your RPi model) to hook up the 3 servo wires to the Raspberry Pi’s GPIO pins
 
-### Getting started
-#### Find your Pi's public IP
-You can get your public IP from [IPChicken](https://ipchicken.com/) after setting up port forwarding on your router.
+### Find your Pi's public IP
+You can get your public IP from [IPChicken](https://ipchicken.com/). Don't forget to set up port forwarding on your router.
 
-#### Register for free TURN server account
+### Register for free TURN server account
 Create a free account on http://numb.viagenie.ca. You will need the server & login details you receive via email to run `populate_templates.sh`.
 
-#### Clone the repo into a folder called OpenTreat in your Pi's home directory
+### Clone the repo into a folder called OpenTreat in your Pi's home directory
 ```
 git clone https://github.com/psycoder17/OpenTreat.git ~/OpenTreat/src
 cd ~/OpenTreat/src/
 ```
 
-#### Generate personalized files from code templates
+### Generate personalized files from code templates
 ```
-sudo bash populate_templates.sh
+bash populate_templates.sh
 ```
 
-#### Test the servo script on your Raspberry Pi
+### Test the servo script on your Raspberry Pi
 A Python3 script takes advantage of the Raspberry Pi’s GPIO pins to send a signal to the servo motor when a user presses the treat button on the webapp. The script turns the servo for a set number of seconds to push the treat through the tube and drop it down at the end.
 
-#### Install Python dependencies
+### Install Python dependencies
 ```
 pip3 install -r python/requirements.txt
 ```
 
-#### Manually execute the script to test that the servo/auger spins
+### Manually execute the script to test that the servo/auger spins
 ```
 python3 python/rotate_auger.py
 ```
