@@ -1,4 +1,4 @@
 <?php
-$command = "python3 broadcast_webcam.py";
+$command = "/bin/bash /var/www/html/start_broadcast_as_pi.sh";
 exec($command, $output);
 ?>
