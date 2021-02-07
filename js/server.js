@@ -77,20 +77,6 @@ app.get('/broadcast',
 app.get('/view',
   require('connect-ensure-login').ensureLoggedIn(),
   function(req, res){
-    var pi_ip = "73.61.201.110";
-    http.get('http://'+ pi_ip +'/start_broadcast.php', (resp) => {
-      let data = '';
-      // A chunk of data has been received.
-      resp.on('data', (chunk) => {
-        data += chunk;
-      });
-      // The whole response has been received. Print out the result.
-      resp.on('end', () => {
-        console.log(data);
-      });
-    }).on("error", (err) => {
-      console.log("Error: " + err.message);
-    });
     res.render('view');
   });
 
