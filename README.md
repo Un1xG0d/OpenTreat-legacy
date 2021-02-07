@@ -1,11 +1,11 @@
 # OpenTreat
 OpenTreat allows a user to view and interact with their pets while not at home. Watch a live video stream of your pets from your smartphone or laptop, and remotely dispense treats with the push of a button.
 
+:movie_camera: [Watch video demo of OpenTreat](https://youtu.be/6tzPRBlFip4) :movie_camera:
+
 <p align="center">
   <img width="300" height="300" src="https://github.com/psycoder17/OpenTreat/blob/master/README/Icon.png">
 </p>
-
-:movie_camera: [Video demo of OpenTreat](https://youtu.be/6tzPRBlFip4) :movie_camera:
 
 ## Treat dispenser system
 ### Overview
