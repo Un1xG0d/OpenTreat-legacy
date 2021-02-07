@@ -15,8 +15,12 @@ const config = {
 const socket = io.connect(window.location.origin);
 const video = document.querySelector("video");
 const enableAudioButton = document.querySelector("#enable-audio");
+const restartBroadcastButton = document.querySelector("#restart-broadcast");
+const rebootPiButton = document.querySelector("#reboot-pi");
 
 enableAudioButton.addEventListener("click", dropTreat)
+restartBroadcastButton.addEventListener("click", restartBroadcast)
+rebootPiButton.addEventListener("click", rebootPi)
 
 socket.on("offer", (id, description) => {
   peerConnection = new RTCPeerConnection(config);
@@ -67,4 +71,8 @@ function dropTreat() {
 
 function rebootPi() {
   window.open("http://<rpi-ip-address>/restart.php");
+}
+
+function restartBroadcast() {
+  window.open("http://<rpi-ip-address>/start_broadcast.php");
 }
