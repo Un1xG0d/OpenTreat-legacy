@@ -5,6 +5,8 @@ OpenTreat allows a user to view and interact with their pets while not at home. 
   <img width="300" height="300" src="https://github.com/psycoder17/OpenTreat/blob/master/README/Icon.png">
 </p>
 
+:movie_camera: [Video demo of OpenTreat](https://youtu.be/6tzPRBlFip4) :movie_camera:
+
 ## Treat dispenser system
 ### Overview
 The treat dispenser system is built using a Raspberry Pi and 3D printed parts. When a user presses the button on the webapp, a Python script is executed on the Pi to turn the servo motor for a certain number of seconds. The servo motor turns the 3D printed auger and pushes the treat down the tube where it drops out the end and into the feeding bowl.
@@ -102,8 +104,6 @@ The red button reboots the Raspberry Pi.
 
 ## Resources
 ### Links
-:movie_camera: [Video demo of OpenTreat](https://youtu.be/6tzPRBlFip4) :movie_camera:
-
 [Thingiverse: original fish feeder model](https://www.thingiverse.com/thing:301532)
 
 [GitHub: original WebRTC broadcasting webapp](https://github.com/TannerGabriel/WebRTC-Video-Broadcast)
