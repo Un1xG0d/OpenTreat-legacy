@@ -33,7 +33,7 @@ pip3 install -r python/requirements.txt
 
 #### Manually execute the script to test that the servo/auger spins
 ```
-python3 rpi-www/rotate_auger.py
+python3 python/rotate_auger.py
 ```
 
 Now that your Raspberry Pi properly dispenses treats when the Python script runs, Apache needs to be setup to host a PHP file that executes the Python script when the browser is redirected to `<Raspberry Pi IP>:80/spin.php`.
