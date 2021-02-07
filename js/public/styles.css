@@ -1,15 +1,18 @@
-@media only screen and (min-width: 380px) {
+@media only screen and (min-width: 480px) {
   /* For desktops: */
   html {
+    background-color: #02b9ff;
     overflow: hidden;
     height: 100%;
   }
   video {width: 50%;}
   #dropTreat {width: 50%;}
+  ::placeholder {
+      color: #02b9ff;
+    }
   input#password {
-      background-color: #575757;
       border: none;
-      color: white;
+      color: #02b9ff;
       font-size: 60px;
       text-align: center;
     }
@@ -34,17 +37,17 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
     html {
+      background-color: #02b9ff;
       overflow: hidden;
       height: 100%;
-      background-image: url("viewBG.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
     }
     video {width: 90%;}
     #dropTreat {width: 90%;}
+    ::placeholder {
+      color: white;
+    }
     input#password {
-      background-color: #575757;
+      background-color: #02b9ff;
       border: none;
       color: white;
       font-size: 60px;
@@ -69,5 +72,11 @@
     .restartButtonsContainer {
       height: 120px;
       width: 90%;
+    }
+    .bgImage {
+      background-image: url("viewBG.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 }
