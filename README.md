@@ -43,6 +43,8 @@ Now that your Raspberry Pi properly dispenses treats when the Python script runs
 sudo bash rpi-www/setup.sh
 ```
 
+Then add `www-data ALL=(root) NOPASSWD: /sbin/reboot ` to your `/etc/sudoers` file to allow the www-data user to reboot the Pi.
+
 The servo connected to the RPi should now spin when visiting `<Raspberry Pi IP>/spin.php` in a web browser. To add the ability to drop treats when not connected to the same WiFi network as the OpenTreat dispenser, you must port forward port 80 of the Raspberry Pi on your router's admin page.
 
 ## Video stream app
