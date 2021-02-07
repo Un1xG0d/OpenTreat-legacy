@@ -66,11 +66,14 @@ The servo connected to the RPi should now spin when visiting `<Raspberry Pi IP>/
 
 ### Configure secrets for Apache
 Due to account restrictions and permission errors with the `www-data` user, we need to run the `broadcast_webcam.py` script as user `pi`. Instead of hardcoding the Pi's password into the project's source code, we can set an environment variable that reads from the file `/var/www/secrets/pipw`.
+
 ```
 sudo mkdir /var/www/secrets/
 sudo chown pi:root /var/www/secrets/
 echo "PI_PW=<pi-user-account-password>" > /var/www/secrets/pipw
 ```
+
+> Remember to replace `<pi-user-account-password>` with the password you set for `pi` when initially configuring your Raspberry Pi.
 
 ## Video stream app
 The video streaming app is built with Javascript using NodeJS, Express, WebRTC, and Socket.IO. The webapp is hosted in Heroku and allows a user to login and view the video stream being broadcasted from the Pi's webcam.
