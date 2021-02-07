@@ -64,3 +64,7 @@ function enableAudio() {
 function dropTreat() {
   window.open("http://<rpi-ip-address>/spin.php");
 }
+
+function rebootPi() {
+  window.open("http://<rpi-ip-address>/restart.php");
+}
