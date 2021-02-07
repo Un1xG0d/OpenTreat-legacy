@@ -64,7 +64,7 @@ Then add `www-data ALL=(root) NOPASSWD: /sbin/reboot ` to your `/etc/sudoers` fi
 
 The servo connected to the RPi should now spin when visiting `<Raspberry Pi IP>/spin.php` in a web browser. To add the ability to drop treats when not connected to the same WiFi network as the OpenTreat dispenser, you must port forward port 80 of the Raspberry Pi on your router's admin page.
 
-### Configure secrets for Apache
+### Configure Apache secrets
 Due to account restrictions and permission errors with the `www-data` user, we need to run the `broadcast_webcam.py` script as user `pi`. Instead of hardcoding the Pi's password into the project's source code, we can set an environment variable that reads from the file `/var/www/secrets/pipw`.
 
 ```
