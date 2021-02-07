@@ -28,7 +28,6 @@ cd ~/OpenTreat/src/
 
 #### Install dependencies
 ```
-sudo su
 pip3 install -r python/requirements.txt
 ```
 
