@@ -36,7 +36,7 @@ pip3 install -r python/requirements.txt
 python3 rpi-www/rotate_auger.py
 ```
 
-Now that your Raspberry Pi properly dispenses treats when the Python script runs, Apache needs to be setup to host a PHP file that executes the Python script when the browser is redirected to `<Raspberry Pi IP>:80/spin.php`. This is kind of hacky so I may improve the workflow here in the future.
+Now that your Raspberry Pi properly dispenses treats when the Python script runs, Apache needs to be setup to host a PHP file that executes the Python script when the browser is redirected to `<Raspberry Pi IP>:80/spin.php`.
 
 ### Configure Apache server
 ```
