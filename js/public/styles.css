@@ -41,7 +41,7 @@
       overflow: hidden;
       height: 100%;
     }
-    video {width: 95%;}
+    video {width: 90%;}
     #dropTreat {width: 90%;}
     ::placeholder {
       color: white;
