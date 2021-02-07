@@ -1,6 +1,10 @@
 # OpenTreat
 OpenTreat allows a user to view and interact with their pets while not at home. Watch a live video stream of your pets from your smartphone or laptop, and remotely dispense treats with the push of a button.
 
+<p align="center">
+  <img width="300" height="300" src="https://github.com/psycoder17/OpenTreat/blob/master/README/Icon.png">
+</p>
+
 ## Treat dispenser system
 ### Overview
 The treat dispenser system is built using a Raspberry Pi and 3D printed parts. When a user presses the button on the webapp, a Python script is executed on the Pi to turn the servo motor for a certain number of seconds. The servo motor turns the 3D printed auger and pushes the treat down the tube where it drops out the end and into the feeding bowl.
