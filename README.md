@@ -89,7 +89,10 @@ If everything was successful you can now browse to `https://<my-opentreat-projec
 
 ## Usage
 ### View the video stream
-On your smartphone or laptop, browse to `https://<my-opentreat-project>.herokuapp.com` to view the video stream of your pets. Press the blue bone button to spin the auger and drop the treats into your pets' bowl. The red button reboots the Raspberry Pi.
+On your smartphone or laptop, browse to `https://<my-opentreat-project>.herokuapp.com` to view the video stream of your pets. 
+Press the blue bone button to spin the auger and drop treats into your pets' bowl. 
+The orange button restarts the webcam broadcast.
+The red button reboots the Raspberry Pi.
 
 ## Resources
 ### Links
