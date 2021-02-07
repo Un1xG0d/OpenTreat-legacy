@@ -11,14 +11,18 @@ The treat dispenser system is built using a Raspberry Pi and 3D printed parts. W
 * 3D printer
 * USB webcam
 
-### Build the dispenser system
+### Physical assembly
 1. Download and 3D print each STL listed in the `models` folder
 	1. The recommended print settings are in the Resources section below
 2. Assemble the parts using super glue
 3. Use the pinout diagram in the Resources section (or find one for your RPi model) to hook up the 3 servo wires to the Raspberry Pi’s GPIO pins
 
-### Install the servo script on your Raspberry Pi
-A Python3 script takes advantage of the Raspberry Pi’s GPIO pins to send a signal to the servo motor when a user presses the treat button on the webapp. The script turns the servo for a set number of seconds to push the treat through the tube and drop it down at the end.
+### Getting started
+#### Find your Pi's public IP
+You can get your public IP from [IPChicken](https://ipchicken.com/) after setting up port forwarding on your router.
+
+#### Register for free TURN server account
+Create a free account on http://numb.viagenie.ca. You will need the server & login details you receive via email to run `populate_templates.sh`.
 
 #### Clone the repo into a folder called OpenTreat in your Pi's home directory
 ```
@@ -26,7 +30,15 @@ git clone https://github.com/psycoder17/OpenTreat.git ~/OpenTreat/src
 cd ~/OpenTreat/src/
 ```
 
-#### Install dependencies
+#### Generate personalized files from code templates
+```
+sudo bash populate_templates.sh
+```
+
+#### Test the servo script on your Raspberry Pi
+A Python3 script takes advantage of the Raspberry Pi’s GPIO pins to send a signal to the servo motor when a user presses the treat button on the webapp. The script turns the servo for a set number of seconds to push the treat through the tube and drop it down at the end.
+
+#### Install Python dependencies
 ```
 pip3 install -r python/requirements.txt
 ```
@@ -58,27 +70,11 @@ echo "PI_PW=<pi-user-account-password>" > /var/www/secrets/pipw
 ## Video stream app
 The video streaming app is built with Javascript using NodeJS, Express, WebRTC, and Socket.IO. The webapp is hosted in Heroku and allows a user to login and view the video stream being broadcasted from the Pi's webcam.
 
-### Create new app on Heroku
-```
-heroku create <my-opentreat-project>
-```
-
-Keep track of your app name; you will need it when populating the code templates.
-
-### Find your Pi's public IP
-You can get your public IP from [IPChicken](https://ipchicken.com/) after setting up port forwarding on your router.
-
-### Register for free TURN server account
-Create a free account on http://numb.viagenie.ca. You will need the server & login details you receive via email to run `populate_templates.sh`.
-
-### Generate personalized files from code templates
-```
-bash populate_templates.sh
-```
-
 ### Deploy the video streaming app to Heroku
 ```
 cd js/
+
+heroku create <my-opentreat-project>
 
 git add .
 git commit -m "commit message"
@@ -88,6 +84,13 @@ git push heroku master
 If everything was successful you can now browse to `https://<my-opentreat-project>.herokuapp.com/broadcast` on your Raspberry Pi to manually start broadcasting the Pi's webcam to your webapp on Heroku.
 
 ## Usage
+### Automatically broadcast Pi's webcam on startup
+Create a cronjob with `crontab -e` to run a Python script on boot to automatically broadcast the Pi's webcam to the webapp hosted on Heroku.
+
+```
+@reboot python3 /var/www/html/broadcast_webcam.py
+```
+
 ### View the video stream
 On your smartphone or laptop, browse to `https://<my-opentreat-project>.herokuapp.com` to view the video stream of your pets. 
 Press the blue bone button to spin the auger and drop treats into your pets' bowl. 
