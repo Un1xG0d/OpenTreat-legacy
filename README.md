@@ -28,6 +28,7 @@ cd ~/OpenTreat/src/
 
 #### Install dependencies
 ```
+sudo su
 pip3 install -r python/requirements.txt
 ```
 
@@ -46,6 +47,14 @@ sudo bash rpi-www/setup.sh
 Then add `www-data ALL=(root) NOPASSWD: /sbin/reboot ` to your `/etc/sudoers` file to allow the www-data user to reboot the Pi.
 
 The servo connected to the RPi should now spin when visiting `<Raspberry Pi IP>/spin.php` in a web browser. To add the ability to drop treats when not connected to the same WiFi network as the OpenTreat dispenser, you must port forward port 80 of the Raspberry Pi on your router's admin page.
+
+### Configure secrets for Apache
+Due to account restrictions and permission errors with the `www-data` user, we need to run the `broadcast_webcam.py` script as user `pi`. Instead of hardcoding the Pi's password into the project's source code, we can set an environment variable that reads from the file `/var/www/secrets/pipw`.
+```
+sudo mkdir /var/www/secrets/
+sudo chown pi:root /var/www/secrets/
+echo "PI_PW=<pi-user-account-password>" > /var/www/secrets/pipw
+```
 
 ## Video stream app
 The video streaming app is built with Javascript using NodeJS, Express, WebRTC, and Socket.IO. The webapp is hosted in Heroku and allows a user to login and view the video stream being broadcasted from the Pi's webcam.
@@ -80,15 +89,8 @@ git push heroku master
 If everything was successful you can now browse to `https://<my-opentreat-project>.herokuapp.com/broadcast` on your Raspberry Pi to manually start broadcasting the Pi's webcam to your webapp on Heroku.
 
 ## Usage
-### Automatically broadcast Pi's webcam on startup
-Create a cronjob with `crontab -e` to run a Python script on boot to automatically broadcast the Pi's webcam to your webapp hosted on Heroku.
-
-```
-@reboot python3 /home/pi/OpenTreat/src/python/broadcast_webcam.py
-```
-
 ### View the video stream
-On your smartphone or laptop, browse to `https://<my-opentreat-project>.herokuapp.com` to view the video stream of your pets. Press the blue bone button to spin the auger and drop the treats into your pets' bowl.
+On your smartphone or laptop, browse to `https://<my-opentreat-project>.herokuapp.com` to view the video stream of your pets. Press the blue bone button to spin the auger and drop the treats into your pets' bowl. The red button reboots the Raspberry Pi.
 
 ## Resources
 ### Links
