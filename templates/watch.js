@@ -37,7 +37,6 @@ socket.on("offer", (id, description) => {
   };
 });
 
-
 socket.on("candidate", (id, candidate) => {
   peerConnection
     .addIceCandidate(new RTCIceCandidate(candidate))
