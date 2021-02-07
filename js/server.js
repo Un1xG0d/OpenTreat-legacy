@@ -65,7 +65,13 @@ app.get('/login',
 app.post('/login', 
   passport.authenticate('local', { failureRedirect: '/login' }),
   function(req, res) {
-    res.redirect('/view');
+    res.render('authed');
+  });
+
+app.get('/broadcast',
+  require('connect-ensure-login').ensureLoggedIn(),
+  function(req, res){
+    res.render('broadcast');
   });
 
 app.get('/view',

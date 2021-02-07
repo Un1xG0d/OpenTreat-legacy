@@ -37,7 +37,6 @@ socket.on("offer", (id, description) => {
   };
 });
 
-
 socket.on("candidate", (id, candidate) => {
   peerConnection
     .addIceCandidate(new RTCIceCandidate(candidate))
@@ -64,4 +63,8 @@ function enableAudio() {
 
 function dropTreat() {
   window.open("http://<rpi-ip-address>/spin.php");
+}
+
+function rebootPi() {
+  window.open("http://<rpi-ip-address>/restart.php");
 }
