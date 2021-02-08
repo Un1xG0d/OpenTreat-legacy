@@ -115,7 +115,7 @@ The red button reboots the Raspberry Pi.
 
 ### Recommended print settings
 > Scale: 100%  
-> Infill: 20%  
+> Infill: 30%  
 > Layer Height: 0.2  
 > Speed: Standard  
 
