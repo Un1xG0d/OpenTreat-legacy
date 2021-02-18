@@ -5,8 +5,18 @@
     overflow: hidden;
     height: 100%;
   }
-  video {width: 50%;}
-  #dropTreat {width: 50%;}
+  video {
+    width: 50%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    bottom: 5%;
+  }
+  .dropTreat {
+    position: absolute;
+    right: 5%;
+    width: 33%;
+  }
   ::placeholder {
       color: #02b9ff;
     }
@@ -28,6 +38,18 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+  .restartButtons {
+    height: 90px;
+    width: 90px;
+  }
+  .restartButtonsContainer {
+    height: 90px;
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 2.5%;
+  }
 }
 
 /* iPhone portrait */
@@ -41,10 +63,21 @@
       overflow: hidden;
       height: 100%;
     }
-    video {width: 90%;}
-    #dropTreat {width: 90%;}
+    video {
+      width: 90%;
+      position: absolute;
+      left: 5%;
+      right: 5%;
+      top: 5%;
+    }
     ::placeholder {
       color: white;
+    }
+    .dropTreat {
+      position: absolute;
+      width: 60vw;
+      bottom: 15vh;
+      left: 20vw;
     }
     input#password {
       background-color: #02b9ff;
@@ -72,11 +105,24 @@
     .restartButtonsContainer {
       height: 120px;
       width: 90%;
+      position: absolute;
+      left: 5%;
+      right: 5%;
+      bottom: 5%;
     }
     .bgImage {
       background-image: url("viewBG.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+    }
+    input[type="submit"] {
+      background: none;
+      color: white;
+      border: none;
+      padding: 0;
+      font-size: 70px;
+      cursor: pointer;
+      outline: inherit;
     }
 }

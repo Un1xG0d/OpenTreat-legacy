@@ -7,18 +7,13 @@
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-icon-114x114-precomposed.png" />
 </head>
 <body>
-  <center>
-    <br>
-    <br>
-    <video playsinline autoplay muted></video>
-    <br><br>
-    <img src="dropTreat.png" id="enable-audio" />
-    <br><br>
-    <div class="restartButtonsContainer">
-      <img src="restartBroadcast.png" id="restart-broadcast" class="restartButtons" style="float: left;" />
-      <img src="rebootPi.png" id="reboot-pi" class="restartButtons" style="float: right;" />
-    </div>
-  </center>
+  <br>
+  <video playsinline autoplay muted></video>
+  <img src="dropTreat.png" class="dropTreat" id="enable-audio" />
+  <div class="restartButtonsContainer">
+    <img src="restartBroadcast.png" id="restart-broadcast" class="restartButtons" style="float: left;" />
+    <img src="rebootPi.png" id="reboot-pi" class="restartButtons" style="float: right;" />
+  </div>
   <script src="/socket.io/socket.io.js"></script>
   <script src="/watch.js"></script>
 </body>

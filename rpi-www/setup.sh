@@ -1,4 +1,4 @@
-#Usage: sudo setup.sh
+#Usage: sudo bash setup.sh
 
 apt update
 apt install apache2 php7.3 libapache2-mod-php7.3

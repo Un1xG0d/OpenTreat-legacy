@@ -72,12 +72,16 @@ app.get('/broadcast',
   require('connect-ensure-login').ensureLoggedIn(),
   function(req, res){
     res.render('broadcast');
+    var datetime = new Date();
+    console.log("[INFO] Broadcast started at: " + datetime);
   });
 
 app.get('/view',
   require('connect-ensure-login').ensureLoggedIn(),
   function(req, res){
     res.render('view');
+    var datetime = new Date();
+    console.log("[INFO] Viewer joined at: " + datetime);
   });
 
 app.use(express.static(__dirname + "/public"));
@@ -104,4 +108,4 @@ io.sockets.on("connection", socket => {
     socket.to(broadcaster).emit("disconnectPeer", socket.id);
   });
 });
-server.listen(port, () => console.log(`Server is running on port ${port}`));
+server.listen(port, () => console.log(`[INFO] Server is running on port ${port}`));
