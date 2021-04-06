@@ -16,6 +16,3 @@ chmod +x /var/www/html/ot_ngrok.sh
 adduser www-data gpio
 chown root.gpio /dev/mem
 chmod g+rw /dev/mem
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.tgz
-tar xf ngrok-stable-linux-arm.tgz
-/home/pi/ngrok authtoken 1hTfjOEDlX771y5WHDHL4bCZ1gc_81262WDRezREwGHuxX8pJ
