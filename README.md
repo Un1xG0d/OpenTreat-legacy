@@ -98,6 +98,7 @@ Create a cronjob with `crontab -e` to run a Python script on boot to automatical
 
 ```
 @reboot python3 /var/www/html/broadcast_webcam.py
+@reboot /bin/bash /var/www/html/ot_ngrok.sh
 ```
 
 ### View the video stream
