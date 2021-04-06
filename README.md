@@ -24,6 +24,8 @@ The treat dispenser system is built using a Raspberry Pi and 3D printed parts. W
 3. Use the pinout diagram in the Resources section (or find one for your RPi model) to hook up the 3 servo wires to the Raspberry Pi’s GPIO pins
 
 ### Configure ngrok
+OpenTreat utilizes [ngrok](https://ngrok.com/docs) to securely expose the PHP pages to the internet. An annual Basic plan subscription allows you to create stable, custom subdomains for your dispensers. This is needed before running the script to populate the templates.
+
 ```
 cd ~/
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.tgz
@@ -44,8 +46,6 @@ cd ~/OpenTreat/src/
 ```
 bash populate_templates.sh
 ```
-
-OpenTreat utilizes [ngrok](https://ngrok.com/docs) to securely expose the PHP pages to the internet. An annual Basic plan subscription allows you to create stable, custom subdomains for your dispensers. This is needed before running the script to populate the templates.
 
 ### Test the servo script on your Raspberry Pi
 A Python3 script takes advantage of the Raspberry Pi’s GPIO pins to send a signal to the servo motor when a user presses the treat button on the webapp. The script turns the servo for a set number of seconds to push the treat through the tube and drop it down at the end.
