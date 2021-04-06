@@ -10,7 +10,7 @@ p.start(0)
 
 try:
     p.ChangeDutyCycle(5)
-    time.sleep(5)
+    time.sleep(1)
     p.stop()
 except KeyboardInterrupt:
     p.stop()
