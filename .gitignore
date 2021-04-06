@@ -1,7 +1,7 @@
 .DS_Store
 js/node_modules/
 js/db/users.js
-js/public/watch.js
-js/public/broadcast.js
+js/securescript/watch.js
+js/securescript/broadcast.js
 python/broadcast_webcam.py
 rpi-www/ot_ngrok.sh
