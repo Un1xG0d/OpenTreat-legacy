@@ -71,6 +71,7 @@ Due to account restrictions and permission errors with the `www-data` user, we n
 sudo mkdir /var/www/secrets/
 sudo chown pi:root /var/www/secrets/
 echo "PI_PW=<pi-user-account-password>" > /var/www/secrets/pipw
+echo "NGROK_PW=<ngrok-basic-auth-password>" >> /var/www/secrets/pipw
 ```
 
 > Remember to replace `<pi-user-account-password>` with the password you set for `pi` when initially configuring your Raspberry Pi.
