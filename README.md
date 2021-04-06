@@ -100,8 +100,8 @@ git push heroku master
 If everything was successful you can now browse to `https://<my-opentreat-project>.herokuapp.com/broadcast` on your Raspberry Pi to manually start broadcasting the Pi's webcam to your webapp on Heroku.
 
 ## Usage
-### Automatically broadcast Pi's webcam on startup
-Create a cronjob with `crontab -e` to run a Python script on boot to automatically broadcast the Pi's webcam to the webapp hosted on Heroku.
+### Automatic startup
+Create a cronjob with `crontab -e` to run a Python script on boot to automatically broadcast the Pi's webcam to the webapp hosted on Heroku. The shell script configures and launches the ngrok tunnel.
 
 ```
 @reboot python3 /var/www/html/broadcast_webcam.py
@@ -110,23 +110,24 @@ Create a cronjob with `crontab -e` to run a Python script on boot to automatical
 
 ### View the video stream
 On your smartphone or laptop, browse to `https://<my-opentreat-project>.herokuapp.com` to view the video stream of your pets. 
-Press the blue bone button to spin the auger and drop treats into your pets' bowl. 
+Press the bone button to spin the auger and drop treats into your pets' bowl. 
 The orange button restarts the webcam broadcast.
 The red button reboots the Raspberry Pi.
 
 ## Resources
 ### Links
+[Viagenie.ca: free TURN servers](http://numb.viagenie.ca)
+
 [Thingiverse: original fish feeder model](https://www.thingiverse.com/thing:301532)
 
 [GitHub: original WebRTC broadcasting webapp](https://github.com/TannerGabriel/WebRTC-Video-Broadcast)
-
-[Viagenie.ca: free TURN servers](http://numb.viagenie.ca)
 
 ### Recommended print settings
 > Scale: 100%  
 > Infill: 30%  
 > Layer Height: 0.2  
 > Speed: Standard  
+> Supports: None
 
 ### RPi GPIO diagram
 > Red wire - Pin 1 - 3v3 power  
