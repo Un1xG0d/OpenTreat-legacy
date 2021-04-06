@@ -1,12 +1,12 @@
 cd ~/OpenTreat/src/
 
-read -p "[prompt] Heroku app name: " heroku_app
-read -p "[prompt] Create webapp password: " webapp_pass
+read -p "[prompt] Heroku app name: " heroku_app #enter only app name, not full url
+read -p "[prompt] Create webapp password: " webapp_pass #choose login password for js webapp
 read -p "[prompt] Create tunnel subdomain name: " ngrok_sub #choose ngrok subdomain name
-read -p "[prompt] Create tunnel password: " ngrok_pass #used for Basic auth to ngrok
-read -p "[prompt] TURN server URL: " turn_url
-read -p "[prompt] TURN server username: " turn_username
-read -p "[prompt] TURN server password: " turn_password
+#read -p "[prompt] Create tunnel password: " ngrok_pass #used for Basic auth to ngrok
+read -p "[prompt] TURN server URL: " turn_url #created on numb.viagenie.ca and sent via email
+read -p "[prompt] TURN server username: " turn_username #created on numb.viagenie.ca and sent via email
+read -p "[prompt] TURN server password: " turn_password #created on numb.viagenie.ca and sent via email
 
 #Handle replacements in broadcast_webcam.py
 sed -e "s#<my-opentreat-project>#$heroku_app#g" -e "s#<view-page-password>#$webapp_pass#g" templates/broadcast_webcam.py > python/broadcast_webcam.py
@@ -37,3 +37,6 @@ cat js/db/users.js |grep $webapp_pass
 sed -e "s#<ngrok-sub>#$ngrok_sub#g" templates/ot_ngrok.sh > rpi-www/ot_ngrok.sh
 echo -e "[info] File generated: rpi-www/ot_ngrok.sh\n[info] Changes:"
 cat rpi-www/ot_ngrok.sh |grep $ngrok_sub
+
+#Print main URL to bookmark
+echo -e "[.   ]\n[..  ]\n[... ]\n[....]\n[info] Your OpenTreat instance link is: https://$heroku_app.herokuapp.com\n[done] Please bookmark the above URL on your phone and laptop!"

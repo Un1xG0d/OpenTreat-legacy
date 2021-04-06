@@ -81,7 +81,7 @@ echo "PI_PW=<pi-user-account-password>" > /var/www/secrets/pipw
 echo "NGROK_PW=<ngrok-basic-auth-password>" >> /var/www/secrets/pipw
 ```
 
-> Remember to replace `<pi-user-account-password>` with the password you set for `pi` when initially configuring your Raspberry Pi.
+> Remember to replace `<pi-user-account-password>` with the password you set for `pi` when initially configuring your Raspberry Pi. `<ngrok-basic-auth-password>` should be set here **and** as a Config Var on the Settings page of your Heroku application.
 
 ## Video stream app
 The video streaming app is built with Javascript using NodeJS, Express, WebRTC, and Socket.IO. The webapp is hosted in Heroku and allows a user to login and view the video stream being broadcasted from the Pi's webcam.
