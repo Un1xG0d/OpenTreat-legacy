@@ -39,6 +39,12 @@ passport.deserializeUser(function(id, cb) {
   });
 });
 
+var dispenserURL = "otdsp000.ngrok.io";
+
+const https = require('https');
+var base64 = require('base-64');
+var utf8 = require('utf8');
+
 let broadcaster;
 const port = process.env.PORT || 4000;
 
@@ -82,6 +88,30 @@ app.get('/view',
     res.render('view');
     var datetime = new Date();
     console.log("[INFO] Viewer joined at: " + datetime);
+  });
+
+app.get('/spin',
+  require('connect-ensure-login').ensureLoggedIn(),
+  function(req, res){
+    var auth = "pi:" + process.env.NGROK_PW;
+    var bytes = utf8.encode(auth);
+    var encoded = base64.encode(bytes);
+    const options = {
+      headers: {
+        'Authorization' : 'Basic ' + encoded
+      }
+    }
+    https.get("https://" + dispenserURL + "/spin.php", options, res => {
+      let data = [];
+      res.on('data', chunk => {
+        data.push(chunk);
+      });
+      res.on('end', () => {
+        console.log('[INFO] Treat dropped!');
+      });
+    }).on('error', err => {
+      console.log('Error: ', err.message);
+    });
   });
 
 app.use(express.static(__dirname + "/public"));
