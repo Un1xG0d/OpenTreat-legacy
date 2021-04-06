@@ -4,3 +4,4 @@ js/db/users.js
 js/public/watch.js
 js/public/broadcast.js
 python/broadcast_webcam.py
+rpi-www/ot_ngrok.sh

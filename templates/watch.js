@@ -66,13 +66,13 @@ function enableAudio() {
 }
 
 function dropTreat() {
-  document.getElementById("frame").src = "http://<rpi-ip-address>/spin.php";
+  document.getElementById("frame").src = "/spin";
 }
 
 function rebootPi() {
-  document.getElementById("frame").src = "http://<rpi-ip-address>/restart.php";
+  document.getElementById("frame").src = "/restart";
 }
 
 function restartBroadcast() {
-  document.getElementById("frame").src = "http://<rpi-ip-address>/start_broadcast.php";
+  document.getElementById("frame").src = "/start_broadcast";
 }

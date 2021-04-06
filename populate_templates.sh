@@ -2,7 +2,8 @@ cd ~/OpenTreat/src/
 
 read -p "[prompt] Heroku app name: " heroku_app
 read -p "[prompt] Create webapp password: " webapp_pass
-read -p "[prompt] Raspberry Pi's public IP address: " pub_ip
+read -p "[prompt] Create tunnel subdomain name: " ngrok_sub #choose ngrok subdomain name
+read -p "[prompt] Create tunnel password: " ngrok_pass #used for Basic auth to ngrok
 read -p "[prompt] TURN server URL: " turn_url
 read -p "[prompt] TURN server username: " turn_username
 read -p "[prompt] TURN server password: " turn_password
@@ -14,17 +15,15 @@ cat python/broadcast_webcam.py |grep $heroku_app
 cat python/broadcast_webcam.py |grep $webapp_pass
 
 #Handle replacements in watch.js
-sed -e "s#<turn-url>#$turn_url#g" -e "s#<turn-username>#$turn_username#g" -e "s#<turn-password>#$turn_password#g" -e "s#<rpi-ip-address>#$pub_ip#g" templates/watch.js > js/public/watch.js
+sed -e "s#<turn-url>#$turn_url#g" -e "s#<turn-username>#$turn_username#g" -e "s#<turn-password>#$turn_password#g" templates/watch.js > js/public/watch.js
 echo -e "[info] File generated: js/public/watch.js\n[info] Changes:"
-cat js/public/watch.js |grep $pub_ip
 cat js/public/watch.js |grep $turn_url
 cat js/public/watch.js |grep $turn_username
 cat js/public/watch.js |grep $turn_password
 
 #Handle replacements in broadcast.js
-sed -e "s#<turn-url>#$turn_url#g" -e "s#<turn-username>#$turn_username#g" -e "s#<turn-password>#$turn_password#g" -e "s#<rpi-ip-address>#$pub_ip#g" templates/broadcast.js > js/public/broadcast.js
+sed -e "s#<turn-url>#$turn_url#g" -e "s#<turn-username>#$turn_username#g" -e "s#<turn-password>#$turn_password#g" templates/broadcast.js > js/public/broadcast.js
 echo -e "[info] File generated: js/public/broadcast.js\n[info] Changes:"
-cat js/public/broadcast.js |grep $pub_ip
 cat js/public/broadcast.js |grep $turn_url
 cat js/public/broadcast.js |grep $turn_username
 cat js/public/broadcast.js |grep $turn_password
@@ -33,3 +32,8 @@ cat js/public/broadcast.js |grep $turn_password
 sed -e "s#<view-page-password>#$webapp_pass#g" templates/users.js > js/db/users.js
 echo -e "[info] File generated: js/db/users.js\n[info] Changes:"
 cat js/db/users.js |grep $webapp_pass
+
+#Handle replacements in ot_ngrok.sh
+sed -e "s#<ngrok-sub>#$ngrok_sub#g" templates/ot_ngrok.sh > rpi-www/ot_ngrok.sh
+echo -e "[info] File generated: rpi-www/ot_ngrok.sh\n[info] Changes:"
+cat rpi-www/ot_ngrok.sh |grep $ngrok_sub
