@@ -8,7 +8,7 @@
 		function sleep (time) {
 		  return new Promise((resolve) => setTimeout(resolve, time));
 		}
-		//sleep after the rotate_auger.py script is done executing then close the current popup window
+		//sleep after the script is done executing then close the current popup window
 		sleep(1).then(() => {
 			window.close()
 		});
