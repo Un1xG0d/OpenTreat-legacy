@@ -1,8 +1,25 @@
+const http = require("http");
+const https = require('https');
 const express = require("express");
 const app = express();
 var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var db = require('./db');
+var base64 = require('base-64');
+var utf8 = require('utf8');
+const server = http.createServer(app);
+const io = require("socket.io")(server);
+let broadcaster;
+const port = process.env.PORT || 4000;
+var dispenserURL = "otdsp000.ngrok.io";
+var auth = "pi:" + process.env.NGROK_PW;
+var bytes = utf8.encode(auth);
+var encoded = base64.encode(bytes);
+const options = {
+  headers: {
+    'Authorization' : 'Basic ' + encoded
+  }
+}
 
 // Configure the local strategy for use by Passport.
 //
@@ -38,28 +55,6 @@ passport.deserializeUser(function(id, cb) {
     cb(null, user);
   });
 });
-
-const https = require('https');
-var base64 = require('base-64');
-var utf8 = require('utf8');
-
-var dispenserURL = "otdsp000.ngrok.io";
-var auth = "pi:" + process.env.NGROK_PW;
-var bytes = utf8.encode(auth);
-var encoded = base64.encode(bytes);
-const options = {
-  headers: {
-    'Authorization' : 'Basic ' + encoded
-  }
-}
-
-let broadcaster;
-const port = process.env.PORT || 4000;
-
-const http = require("http");
-const server = http.createServer(app);
-
-const io = require("socket.io")(server);
 
 app.set('views', __dirname + '/secure');
 app.set('view engine', 'ejs');
