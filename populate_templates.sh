@@ -15,18 +15,18 @@ cat python/broadcast_webcam.py |grep $heroku_app
 cat python/broadcast_webcam.py |grep $webapp_pass
 
 #Handle replacements in watch.js
-sed -e "s#<turn-url>#$turn_url#g" -e "s#<turn-username>#$turn_username#g" -e "s#<turn-password>#$turn_password#g" templates/watch.js > js/public/watch.js
-echo -e "[info] File generated: js/public/watch.js\n[info] Changes:"
-cat js/public/watch.js |grep $turn_url
-cat js/public/watch.js |grep $turn_username
-cat js/public/watch.js |grep $turn_password
+sed -e "s#<turn-url>#$turn_url#g" -e "s#<turn-username>#$turn_username#g" -e "s#<turn-password>#$turn_password#g" templates/watch.js > js/securescript/watch.js
+echo -e "[info] File generated: js/securescript/watch.js\n[info] Changes:"
+cat js/securescript/watch.js |grep $turn_url
+cat js/securescript/watch.js |grep $turn_username
+cat js/securescript/watch.js |grep $turn_password
 
 #Handle replacements in broadcast.js
-sed -e "s#<turn-url>#$turn_url#g" -e "s#<turn-username>#$turn_username#g" -e "s#<turn-password>#$turn_password#g" templates/broadcast.js > js/public/broadcast.js
-echo -e "[info] File generated: js/public/broadcast.js\n[info] Changes:"
-cat js/public/broadcast.js |grep $turn_url
-cat js/public/broadcast.js |grep $turn_username
-cat js/public/broadcast.js |grep $turn_password
+sed -e "s#<turn-url>#$turn_url#g" -e "s#<turn-username>#$turn_username#g" -e "s#<turn-password>#$turn_password#g" templates/broadcast.js > js/securescript/broadcast.js
+echo -e "[info] File generated: js/securescript/broadcast.js\n[info] Changes:"
+cat js/securescript/broadcast.js |grep $turn_url
+cat js/securescript/broadcast.js |grep $turn_username
+cat js/securescript/broadcast.js |grep $turn_password
 
 #Replace <view-page-password> with $webapp_pass
 sed -e "s#<view-page-password>#$webapp_pass#g" templates/users.js > js/db/users.js

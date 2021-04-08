@@ -147,6 +147,7 @@ app.get('/restart',
   });
 
 app.use(express.static(__dirname + "/public"));
+app.use('/securescript', require('connect-ensure-login').ensureLoggedIn(), express.static(__dirname + "/securescript"));
 
 io.sockets.on("error", e => console.log(e));
 io.sockets.on("connection", socket => {
