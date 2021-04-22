@@ -137,7 +137,9 @@ The red button reboots the Raspberry Pi.
 ![](README/RPi-GPIO-pinout.png)
 
 ### Screenshots & proof-of-concept
-![](README/Mockup-2.png)
+![](README/Mockup-3.png)
+
+![](README/Mockup-4.png)
 
 ![](README/Electronics-in-case.jpg)
 
