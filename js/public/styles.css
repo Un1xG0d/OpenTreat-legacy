@@ -1,18 +1,14 @@
-html {
-  background-color: #000000;
-}
-
 section {
   height: 100vh;
 }
 
 input#password {
-  background-color: #485461;
-  border-radius: 25px;
-  border: 2px solid #ffffff;
+  background: none;
+  border-bottom: 2px solid #ffffff;
   color: white;
   font-size: 50px;
   text-align: center;
+  outline: none;
 }
 
 input[type="submit"] {
