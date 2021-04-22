@@ -6,7 +6,7 @@ input#password {
   background: none;
   border-bottom: 2px solid #ffffff;
   color: white;
-  font-size: 50px;
+  font-size: 25px;
   text-align: center;
   outline: none;
 }
@@ -14,7 +14,7 @@ input#password {
 input[type="submit"] {
   background: none;
   color: white;
-  font-size: 50px;
+  font-size: 25px;
   cursor: pointer;
   outline: inherit;
 }
@@ -55,6 +55,8 @@ input[type="submit"] {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
 }
 
 .video-container {
@@ -115,5 +117,5 @@ input[type="submit"] {
 .roundCorners {
   border-radius: 25px;
   border: 2px solid #ffffff;
-  padding: 50px;
+  padding: 25px;
 }
