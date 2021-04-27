@@ -56,7 +56,7 @@ passport.deserializeUser(function(id, cb) {
   });
 });
 
-app.set('views', __dirname + '/secure');
+app.set('views', __dirname + '/secureview');
 app.set('view engine', 'ejs');
 
 app.use(require('morgan')('combined'));
