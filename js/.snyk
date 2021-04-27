@@ -1,0 +1,9 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.19.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-XMLHTTPREQUESTSSL-1082936:
+    - socket.io > socket.io-client > engine.io-client > xmlhttprequest-ssl:
+        reason: no update or patch available
+        expires: '2021-05-27T16:52:56.139Z'
+patch: {}
