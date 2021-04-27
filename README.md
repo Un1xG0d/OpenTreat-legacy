@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://github.com/psycoder17/OpenTreat/blob/master/README/Icon-full.png" height='80px'>
+  <img src="https://github.com/psycoder17/OpenTreat/blob/master/README/Icon-full.png" height='100px'>
 </h1>
 
 <div align="center">
@@ -7,8 +7,10 @@
 	<a href="https://snyk.io/test/github/psycoder17/OpenTreat?targetFile=js/package.json"><img src="https://snyk.io/test/github/psycoder17/OpenTreat/badge.svg?targetFile=js/package.json" alt="View Snyk report"></a>
 	<a href="https://github.com/psycoder17/OpenTreat/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="View pull requests"></a>
 </div>
-
+<br>
+<p>
 OpenTreat allows a user to view and interact with their pets while not at home. Watch a live video stream of your pets from your smartphone or laptop, and remotely dispense treats with the push of a button.
+</p>
 
 :movie_camera: [Watch video demo of OpenTreat](https://youtu.be/6tzPRBlFip4) :movie_camera:
 
