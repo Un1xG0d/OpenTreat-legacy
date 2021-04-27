@@ -1,5 +1,5 @@
-[![Known Vulnerabilities](https://snyk.io/test/github/psycoder17/OpenTreat/badge.svg?targetFile=js/package.json)](https://snyk.io/test/github/psycoder17/OpenTreat?targetFile=js/package.json) 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/psycoder17/OpenTreat/graphs/commit-activity) 
+[![Known Vulnerabilities](https://snyk.io/test/github/psycoder17/OpenTreat/badge.svg?targetFile=js/package.json)](https://snyk.io/test/github/psycoder17/OpenTreat?targetFile=js/package.json) 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/psycoder17/OpenTreat/pulls)
 
 # OpenTreat
