@@ -1,15 +1,16 @@
-[![Maintenance](https://img.shields.io/badge/maintained%3F-yes-green.svg)](https://github.com/psycoder17/OpenTreat/graphs/commit-activity) 
-[![Known Vulnerabilities](https://snyk.io/test/github/psycoder17/OpenTreat/badge.svg?targetFile=js/package.json)](https://snyk.io/test/github/psycoder17/OpenTreat?targetFile=js/package.json) 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/psycoder17/OpenTreat/pulls)
+<h1 align="center">
+  <img src="https://github.com/psycoder17/OpenTreat/blob/master/README/Icon-full.png">
+</h1>
 
-# OpenTreat
+<div align="center">
+	<a href="https://github.com/psycoder17/OpenTreat/graphs/commit-activity"><img src="https://img.shields.io/badge/maintained%3F-yes-green.svg" alt="View commits"></a>
+	<a href="https://snyk.io/test/github/psycoder17/OpenTreat?targetFile=js/package.json"><img src="https://snyk.io/test/github/psycoder17/OpenTreat/badge.svg?targetFile=js/package.json" alt="View Snyk report"></a>
+	<a href="https://github.com/psycoder17/OpenTreat/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="View pull requests"></a>
+</div>
+
 OpenTreat allows a user to view and interact with their pets while not at home. Watch a live video stream of your pets from your smartphone or laptop, and remotely dispense treats with the push of a button.
 
 :movie_camera: [Watch video demo of OpenTreat](https://youtu.be/6tzPRBlFip4) :movie_camera:
-
-<p align="center">
-  <img width="300" height="300" src="https://github.com/psycoder17/OpenTreat/blob/master/README/Icon.png">
-</p>
 
 ## Treat dispenser system
 ### Overview
