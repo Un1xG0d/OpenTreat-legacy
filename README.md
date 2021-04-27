@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/psycoder17/OpenTreat/badge.svg?targetFile=js/package.json)](https://snyk.io/test/github/psycoder17/OpenTreat?targetFile=js/package.json)
+
 # OpenTreat
 OpenTreat allows a user to view and interact with their pets while not at home. Watch a live video stream of your pets from your smartphone or laptop, and remotely dispense treats with the push of a button.
 
