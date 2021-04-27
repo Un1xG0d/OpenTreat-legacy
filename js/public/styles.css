@@ -9,6 +9,7 @@ input#password {
   font-size: 25px;
   text-align: center;
   outline: none;
+  width: 100%;
 }
 
 input[type="submit"] {
