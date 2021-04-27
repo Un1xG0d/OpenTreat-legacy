@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://github.com/psycoder17/OpenTreat/blob/master/README/Icon-full.png" height='100px'>
+  <img src="https://github.com/psycoder17/OpenTreat/blob/master/README/Icon-full.png" height='250px'>
 </h1>
 
 <div align="center">
