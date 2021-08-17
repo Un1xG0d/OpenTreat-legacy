@@ -1,6 +1,6 @@
 {
   "name": "OpenTreat",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Video chat with your pet and remotely dispense treats with the push of a button.",
   "main": "server.js",
   "scripts": {
