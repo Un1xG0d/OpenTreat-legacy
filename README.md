@@ -3,7 +3,7 @@
 </h1>
 
 <div align="center">
-	<a href="https://github.com/psycoder17/OpenTreat/graphs/commit-activity"><img src="https://img.shields.io/badge/maintained%3F-yes-green.svg" alt="View commits"></a>
+	<a href="https://github.com/psycoder17/OpenTreat/graphs/commit-activity"><img src="https://img.shields.io/badge/maintained%3F-no-red.svg" alt="View commits"></a>
 	<a href="https://snyk.io/test/github/psycoder17/OpenTreat?targetFile=js/package.json"><img src="https://snyk.io/test/github/psycoder17/OpenTreat/badge.svg?targetFile=js/package.json" alt="View Snyk report"></a>
 	<a href="https://github.com/psycoder17/OpenTreat/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="View pull requests"></a>
 </div>
